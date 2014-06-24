@@ -1,0 +1,11 @@
+export GMAIL_USERNAME=“itay289@gmail.com”
+
+export GMAIL_PASSWORD=“280980itay”
+
+export MAILCHIMP_API_KEY="3d77ca52933e3b7ec4f8c9c04b8afa36-us8"
+
+export MAILCHIMP_LIST_ID="a8b6a00d9f"
+
+export OWNER_EMAIL="itay289@gmail.com"
+
+export SECRET_KEY_BASE="0f65f952e12f79eb53a45687a8050c80d07c58829d8318cf89f4c0399a81dba2ff1112d910ffa106d0637d0a7e6fd55670737a4b0db0dd41e0dd633ada9df659"
