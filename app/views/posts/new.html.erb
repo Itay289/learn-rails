@@ -1,0 +1,11 @@
+<% content_for :title do %>post<% end %>
+<h3>Posts</h3>
+<div class="form">
+  <%= simple_form_for @post do |form| %>
+    <%= form.error_notification %>
+    <%= form.input :head, autofocus: true %>
+    <%= form.input :title %>
+    <%= form.input :post, as: :text %>
+    <%= form.button :submit, 'Submit', class: 'submit' %>
+  <% end %>
+</div>  

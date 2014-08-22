@@ -6,6 +6,10 @@ gem 'rails', '4.1.1'
 
 # Rails defaults
 
+gem "bcrypt-ruby", :require => "bcrypt"
+
+gem 'devise'
+
 gem 'sqlite3'
 
 gem 'sass-rails', '~> 4.0.3'
@@ -19,8 +23,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'jbuilder', '~> 2.0'
-
-gem 'spring', group: :development
 
 # learn-rails
 
@@ -38,11 +40,15 @@ gem 'simple_form'
 
 group :development do
 
-gem 'better_errors'
+  gem 'better_errors'
 
-gem 'quiet_assets'
+  gem 'quiet_assets'
 
-gem 'rails_layout'
+  gem 'rails_layout'
+
+  gem 'spring'
+
+  gem 'pry'
 
 end
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

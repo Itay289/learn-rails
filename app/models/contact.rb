@@ -1,9 +1,8 @@
 class Contact < ActiveRecord::Base
-  has_no_table
-
-  column :name, :string
-  column :email, :string
-  column :content, :string
+  has_many :posts
+  # column :name, :string
+  # column :email, :string
+  # column :content, :string
 
   validates :name, presence: true
   validates :email, presence: true,
@@ -13,11 +12,11 @@ class Contact < ActiveRecord::Base
 
   def update_spreadsheet
     connection = GoogleDrive.login(Rails.application.secrets.email_provider_username,
-      Rails.application.secrets.email_provider_password)
+  Rails.application.secrets.email_provider_password )
 
-    ss = connection.spreadsheet_by_title('Learn-Rails-Exaple')
+    ss = connection.spreadsheet_by_title('Learn-Rails-Example')
     if ss.nil?
-      ss = connection.create_spreadsheet('Learn-Rails-Exaple')
+      ss = connection.create_spreadsheet('Learn-Rails-Example')
     end
     ws = ss.worksheets[0]
     last_row = 1 + ws.num_rows
